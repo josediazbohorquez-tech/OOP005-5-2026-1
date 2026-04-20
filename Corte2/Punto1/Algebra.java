@@ -3,19 +3,44 @@ import java.util.*;
 
 class Algebra<f> {
     Scanner sc= new Scanner(System.in);
-    public int [][] data;
-    public int Filas;
-    public int Columnas;
+    private int [][] data;
+    private int Filas;
+    private int Columnas;
+
+    public int[][] getData() {
+        return data;
+    }
+
+    public void setData(int[][] data) {
+        this.data = data;
+        this.Filas=data.length;
+        this.Columnas=data[0].length;
+    }
+
+    public int getFilas() {
+        return Filas;
+    }
+
+    public void setFilas(int Filas) {
+        this.Filas = Filas;
+    }
+
+    public int getColumnas() {
+        return Columnas;
+    }
+
+    public void setColumnas(int Columnas) {
+        this.Columnas = Columnas;
+    }
     
-    
-    public void Taman(int n){
+    public void setTaman(int n){
         Filas=n;
         Columnas=n;
         
         data =new int[Filas][Columnas];
     }
     
-    
+    ////METODOS
     public void cargar(){
         
         for(int i=0; i<Filas; i++){
@@ -45,7 +70,6 @@ class Algebra<f> {
                 this.data[i][j]=M1[i][j]+M2[i][j];
             }
         }
-//        return resultado;
     }
     
     public void restaMatriz(int[][] M1, int[][] M2 ){
@@ -55,7 +79,6 @@ class Algebra<f> {
                 this.data[i][j]=M1[i][j]-M2[i][j];
             }
         }
-//        return resultado;
     }
     
     public void Transpuesta(int[][] M1){
@@ -79,7 +102,6 @@ class Algebra<f> {
                 
             }
         }
-//        return resultado;
     }
     
     public void Multiplicacion(int[][] M1, int[][] M2){
@@ -94,25 +116,8 @@ class Algebra<f> {
                 }
             }
         }
-        
-//        return resultado;
     }
     
-//    public int determinante(int[][] M1){
-//        int resultado=1;
-//        int suma; 
-//        for (int i = 0; i < Filas ; i ++) {
-//            for (int j = 0; j < Columnas ; j ++) {
-//                
-//                suma=()
-//                
-//                resultado=1;
-//            }
-//        }
-//        
-//        
-//        
-//        return resultado;
-//    } 
+
     
 }//Corchete del codigo
